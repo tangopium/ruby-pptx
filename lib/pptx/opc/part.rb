@@ -5,7 +5,7 @@ module PPTX
     class Part < BasePart
       def initialize(package, part_name)
         super(package, part_name)
-        @relationships = Relationships.new(package, relationship_part_name)
+        @relationships = Relationships.new(package, relationship_part_name(part_name))
       end
 
       def relative_part_name(name)
